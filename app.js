@@ -26,12 +26,12 @@ app.post('/', (req,res) => {
 
 const query = req.body.cityName;
 // const query = "Paris";
-  const api_key = "89f6d7a23097482555e26c67ea96a599";
+  const api_key = "your_api_key";
   const units = "metric";
 
 
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + api_key + "&units=" + units;
-  // const url = "https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=89f6d7a23097482555e26c67ea96a599&units=metric";
+  
 
     https.get(url, (response) => {
       console.log(response.statusCode); //o/p -> 200 
